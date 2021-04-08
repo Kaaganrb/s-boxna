@@ -1,12 +1,13 @@
 {
-    "name": "S&Boxe",
+    "name": "sboxe",
     "version": "0.0.1",
     "description": "",
     "main": "index.js",
     "dependencies": {
-      "discord.js": "^12.2.0"
+        "discord.js": "^12.2.0"
     },
     "devDependencies": {},
     "scripts": {
         "start": "node index.js"
     }
+}

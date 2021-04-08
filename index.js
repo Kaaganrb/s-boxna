@@ -1,10 +1,9 @@
 // Appels de fichiers //
 const Discord = require("discord.js")
-const Token = require("./token.json")
 const Insult = require("./insult.json")
 // Connexions discord //
 const client = new Discord.Client()
-client.login(Token.token)
+client.login(process.env.TOKEN)
 // Variables //
 ins = Insult["insult"]
 

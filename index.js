@@ -4,6 +4,10 @@ const Insult = require("./insult.json")
 // Connexions discord //
 const client = new Discord.Client()
 client.login(process.env.TOKEN)
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`App is running on port ${ PORT }`);
+});
 // Variables //
 ins = Insult["insult"]
 

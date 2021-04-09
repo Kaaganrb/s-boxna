@@ -4,6 +4,9 @@ const Insult = require("./insult.json")
 // Connexions discord //
 const client = new Discord.Client()
 client.login(process.env.TOKEN)
+var port = process.env.PORT || 8080;
+var server=app.listen(port,function() {
+console.log("app running on port 8080"); });
 // Variables //
 ins = Insult["insult"]
 

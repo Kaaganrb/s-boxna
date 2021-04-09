@@ -12,7 +12,6 @@ client.on("message", function (message) {
     msg = message.content
 
     ListeDeMot = msg.split(" ")
-    ListeDeMot = msg.split(",")
     if(InsultScroll(ins,ListeDeMot) == true){
         message.delete()
     }

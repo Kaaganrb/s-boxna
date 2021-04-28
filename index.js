@@ -1,10 +1,12 @@
 // Appels de fichiers //
 const Discord = require("discord.js")
 const Insult = require("./insult.json")
+const Token = require("./token.json")
 const Insulte = require("./insult.js")
+const MembersId = require("./membersid.js")
 // Connexions discord //
 const client = new Discord.Client()
-client.login(process.env.TOKEN)
+client.login(Token.token)
 // Variables //
 ins = Insult["insult"]
 
@@ -13,12 +15,12 @@ ins = Insult["insult"]
 client.on("message", function (message) {
     msg = message.content
     if (message.author.bot == false) {
-        Insulte.InsultScroll(msg,message)
-        if(message.member.roles.cache.has("830492864756449297")) {
-            console.log(`Oui l'auteur du message à ce rôle !`);
-        } 
+        console.log(MembersId.MembersId(message))
+        if(MembersId.MembersId(message)) {
+            message.reply("Ouais mon gars", {tts:true})
+        }
         else {
-            console.log(`Bah non enfait.. il à pas ce rôle.`);
+            Insulte.InsultScroll(msg,message)
         }
     }
 }) 
